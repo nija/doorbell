@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+  <title> Doorbell : {% block title %} TITLE HERE {% endblock %}</title>
+  <!-- Load JQuery -->
+  <script type="text/javascript"
+        src="http://code.jquery.com/jquery.js"></script>
+  <!-- Load Bootstrap -->
+  <link rel="stylesheet" 
+        type='text/css'
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript"
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <!-- Load Google Fonts -->
+<!--   <link href='https://fonts.googleapis.com/css?family=Lobster' 
+        rel='stylesheet' 
+        type='text/css'> -->
+  <!-- Load my custom CSS -->
+
+
+</head>
+{% block body %} BODY HERE {% endblock %}
+<div class="container-fluid">
+  <h1 align="center">Doorbell of Love
+  </h1>
+  {% for msg in get_flashed_messages() %}
+    <div class="alert alert-info">{{ msg }}</div>
+  {% endfor %}
+
+  {% block content %} CONTENT HERE {% endblock %}
+</div>
+
+<!-- Sticky footer -->
+    <footer class="footer" id="footer">
+      <div class="container">
+        <p class="text-muted">&copy; 2016 Lee Krasnow</p>
+      </div>
+    </footer>
+
+<!-- <script type="text/javascript" src="../static/js/chatty.js"></script> -->
+</body>
+</html>

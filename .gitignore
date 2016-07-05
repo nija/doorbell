@@ -1,0 +1,5 @@
+*venv*
+*.pyc
+.coveralls.yml
+experiments
+.env_vars
