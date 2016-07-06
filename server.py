@@ -47,12 +47,14 @@ def activate(pin):
     '''Testing function: activate a pin'''
     # Code goes here
     flash(jsonify({'activate': pin}))
+    return render_template("index.html")
 
 @app.route('/deactivate/<int:pin>', methods=["POST"])
 def deactivate(pin):
     '''Testing function: activate a pin'''
     # Code goes here
     flash(jsonify({'deactivate' : pin}))
+    return render_template("index.html")
 
 
 @app.route('/pulse/<int:pin>', methods=["POST"])
@@ -60,6 +62,7 @@ def pulse(pin):
     '''Testing function: activate a pin'''
     # Code goes here
     flash(jsonify({'pulse': pin}))
+    return render_template("index.html")
 
 
 @app.route('/play', methods=["POST"])
@@ -68,6 +71,7 @@ def play(encoding):
     encoding = bleach.clean(encoding)
     # Code goes here
     flash(jsonify({'play': encoding}))
+    return render_template("index.html")
 
 
 # ====== Main Application ======
